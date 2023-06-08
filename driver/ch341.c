@@ -1474,6 +1474,7 @@ static int __init ch341_init(void)
 	if (!ch341_tty_driver)
 		return -ENOMEM;
 #endif
+	// TODO: Also of note is the hardcoded CH341_UART name for the driver name.
 	ch341_tty_driver->driver_name = "ch341_uart", ch341_tty_driver->name = "ttyUSB",
 	ch341_tty_driver->major = CH341_TTY_MAJOR, ch341_tty_driver->minor_start = 0,
 	ch341_tty_driver->type = TTY_DRIVER_TYPE_SERIAL, ch341_tty_driver->subtype = SERIAL_TYPE_NORMAL,
